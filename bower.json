@@ -1,0 +1,23 @@
+{
+  "name": "Webbits",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "Konstantin Kopkov <pryzm0@gmail.com>"
+  ],
+  "description": "Webbits Front-end",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.14",
+    "bootstrap": "~3.3.2",
+    "angular-bootstrap": "~0.12.1"
+  }
+}

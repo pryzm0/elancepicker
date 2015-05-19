@@ -1,0 +1,20 @@
+
+.jobDate {
+	width: 7em;
+}
+
+.entryMeta {
+	margin-top: 1em;
+}
+.entryMeta img {
+	margin-top: -0.20em;
+	margin-right: 0.20em;
+}
+
+.entryDescription {
+	white-space: pre-line;
+	height: 30em;
+	max-height: 30em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
