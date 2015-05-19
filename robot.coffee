@@ -1,3 +1,5 @@
+#!/usr/bin/env coffee
+
 _ = require 'lodash'
 Q = require 'q'
 
@@ -8,7 +10,7 @@ log = (require 'bunyan').createLogger {
   name: 'scrapejobs'
   streams: [
     { level: 'trace', stream: process.stdout },
-    { level: 'info', path: './log/scrapejobs' },
+    { level: 'info', path: './log/robot.log' },
   ]
 }
 
@@ -219,7 +221,7 @@ induct = (task, doc) ->
 
 
 start = new Date().getTime()
-(require 'wbt/reactor')(induct, TimeoutThrottle()).then ->
+(require 'wbt/reactor')(induct, TimeoutThrottle(5*1000)).then ->
   total = Math.ceil 1e-3 * ((new Date().getTime()) - start)
 
   log.info { totalTime: "#{total}s" }, 'done'
