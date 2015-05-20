@@ -9,6 +9,8 @@
 .entryMeta img {
 	margin-top: -0.20em;
 	margin-right: 0.20em;
+	width: 16px;
+	height: 16px;
 }
 
 .entryDescription {

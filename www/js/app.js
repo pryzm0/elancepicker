@@ -45,6 +45,9 @@
           if (entry.target.indexOf('elance') !== -1) {
             entry.icon = 'https://www.elance.com/media/images/4.0/favicon.ico';
           }
+          if (entry.target.indexOf('upwork') !== -1) {
+            entry.icon = 'https://www.upwork.com/favicon.ico';
+          }
           if (entry.target.indexOf('peopleperhour') !== -1) {
             entry.icon = 'http://www.peopleperhour.com/favicon2.ico';
           }
