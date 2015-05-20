@@ -1,6 +1,5 @@
 
-nano = (require 'nano')('http://localhost:5984')
-db = (nano.db.use 'scrapejobs')
+storage = require '../storage'
 
 module.exports = (req, res) ->
   page = parseInt req.query.page
@@ -8,26 +7,5 @@ module.exports = (req, res) ->
 
   pageSize = 10
 
-  param =
-    skip: pageSize * page
-    limit: pageSize
-    descending: true
-
-  console.log 'recent', param
-
-  db.view 'app', 'recentTotalCount', (err, data) ->
-    totalCount = data.rows[0].value
-
-    db.view 'app', 'recent', param, (err, data) ->
-      unless data
-        entryList = []
-      else
-        entryList = data.rows.map (row) ->
-          target: row.id
-          title: row.value.content.title
-          description: row.value.content.description
-          price: row.value.adhoc.price
-          published: row.value.adhoc.published
-          discovered: row.value.ts
-
-      res.json { total: totalCount, list: entryList }
+  storage.getPage(page, pageSize)
+    .then (data) -> res.json data
