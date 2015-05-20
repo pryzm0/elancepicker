@@ -16,6 +16,9 @@
     "q": "^1.4.1",
     "request": "^2.55.0",
     "sugar": "^1.4.1",
+    "touch": "0.0.3",
+    "tough-cookie": "^1.1.0",
+    "tough-cookie-filestore": "0.0.1",
     "wbt": "pryzm0/wbt"
   }
 }

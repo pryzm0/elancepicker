@@ -2,6 +2,9 @@
 logs
 *.log
 
+# Cookies
+_cookiejar.json
+
 # Runtime data
 pids
 *.pid

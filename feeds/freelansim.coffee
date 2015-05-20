@@ -21,7 +21,7 @@ parseEntry = ($) -> [
       ($ 'span.icon_task_publish_at').next().text().trim()
 ]
 
-crawlTask = require './task'
+crawlTask = require '../task'
 
 crawlIndex = crawlTask 'freelansim-index', [parseIndex]
 crawlEntry = crawlTask 'freelansim-content', [parseEntry]

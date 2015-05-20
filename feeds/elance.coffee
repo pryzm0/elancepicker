@@ -21,7 +21,7 @@ parseEntry = ($) -> [
       ($ 'li.spr-posted_date').text().trim().replace(/^\w+:\s*/, '')
 ]
 
-crawlTask = require './task'
+crawlTask = require '../task'
 
 crawlIndex = crawlTask 'elance-index', [parseIndex]
 crawlEntry = crawlTask 'elance-content', [parseEntry]

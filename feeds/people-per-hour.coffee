@@ -19,7 +19,7 @@ parseEntry = ($) -> [
       ($ 'i.fpph-clock-wall').parents('li').first().find('time').text().trim()
 ]
 
-crawlTask = require './task'
+crawlTask = require '../task'
 
 crawlIndex = crawlTask 'pph-index', [parseIndex]
 crawlEntry = crawlTask 'pph-content', [parseEntry]
