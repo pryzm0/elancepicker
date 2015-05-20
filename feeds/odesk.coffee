@@ -13,7 +13,7 @@ parseEntry = ($) -> [
       ($ 'h1').text().trim()
     description:
       ($ '.air-card h2').filter((k, el) -> ($ el).text().toUpperCase() == 'DETAILS')
-        .next('p').text().trim()
+        .nextAll('p').text().trim()
     price:
       ($ '.air-icon-payment-circle').parent().next('div').find('strong').text().trim()
     published:
