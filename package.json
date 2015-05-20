@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "iojs": "2.0.x"
+  },
   "author": "Konstantin Kopkov",
   "license": "MIT",
   "dependencies": {
