@@ -4,21 +4,22 @@ ICEWEASEL = 'Mozilla/5.0 (X11; Linux x86_64; rv:17.0) Gecko/20121202 Firefox/17.
 random = (arr) -> arr[Math.floor arr.length * Math.random()]
 
 request = require 'request'
-touch = require 'touch'
-FileCookieStore = require 'tough-cookie-filestore'
+# touch = require 'touch'
+# FileCookieStore = require 'tough-cookie-filestore'
 
 
 class LocalAgent
 
-  COOKIE_JAR_FILE = '_cookiejar.json'
+  # COOKIE_JAR_FILE = '_cookiejar.json'
 
-  touch.sync(COOKIE_JAR_FILE)
+  # touch.sync(COOKIE_JAR_FILE)
 
   _request = request.defaults {
     headers: {
       'User-Agent': ICEWEASEL
     }
-    jar: (request.jar new FileCookieStore(COOKIE_JAR_FILE))
+    # jar: (request.jar new FileCookieStore(COOKIE_JAR_FILE))
+    jar: true
   }
 
   fetch: (url) -> _request(url)
