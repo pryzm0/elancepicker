@@ -10,5 +10,5 @@ app.get '/recent', (require './views/recent')
 
 server = http.createServer app
 
-server.listen 8080, ->
-  console.log 'Listening on', 8080
+server.listen process.env.PORT, ->
+  console.log 'Listening on', process.env.PORT
