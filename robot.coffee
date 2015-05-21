@@ -62,18 +62,17 @@ class Robot
     Q.resolve()
 
 
-(require './storage').then (storage) ->
-  robot = new Robot(storage)
+module.exports = ->
+  (require './storage').then (storage) ->
+    robot = new Robot(storage)
 
-  schedule = (require 'wbt/schedule').TimeoutThrottle(5*1000)
-  # schedule = (require 'wbt/schedule').Direct
+    schedule = (require 'wbt/schedule').TimeoutThrottle(15*1000)
+    # schedule = (require 'wbt/schedule').Direct
 
-  log.trace 'started'
-  start = Date.now()
+    log.trace 'Robot started'
+    start = Date.now()
 
-  (require 'wbt/reactor')(robot.induct, schedule).then ->
-    end = Date.now()
+    (require 'wbt/reactor')(robot.induct, schedule).then ->
+      end = Date.now()
 
-    log.trace { totalTime: (end - start) }, 'finished'
-
-    storage.disconnect()
+      log.trace { totalTime: (end - start) }, 'Robot finished'
