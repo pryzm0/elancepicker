@@ -6,6 +6,6 @@ module.exports = bunyan.createLogger {
     res: bunyan.stdSerializers.res
   streams: [
     { level: 'trace', stream: process.stdout },
-    { level: 'info', path: '_robot.log' },
+    # { level: 'info', path: '_robot.log' },
   ]
 }
