@@ -20,3 +20,13 @@
 	overflow-x: hidden;
 	overflow-y: auto;
 }
+
+.para {
+	text-indent: 2em;
+	text-align: justify;
+}
+
+.toolLogo {
+	float: right;
+	margin: 1em;
+}
