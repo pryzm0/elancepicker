@@ -15,5 +15,5 @@ server.listen (port = process.env.PORT ? 8080), ->
   console.log 'Listening on', port
 
 
-# # Run robot every 12 minutes.
-# setInterval (require './robot'), 12*60*1000
+# Run robot every 12 minutes.
+setInterval (require './robot'), 12*60*1000
